@@ -1,0 +1,116 @@
+.hero {
+    height: 100vh;
+    background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.hero-left h2 {
+    color: #090909;
+    font-size: 24px;
+    font-weight: 600;
+    animation: fadeIn 1.2s ease;
+}
+
+.hero-left p {
+    color: #171717;
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0;
+    animation: fadeInUp 1.2s ease;
+}
+
+.hero-hand-icon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    animation: bounceIn 1.3s ease;
+}
+
+.hero-hand-icon img {
+    width: 70px;
+    animation: wave 2s infinite;
+}
+
+.hero-latest-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 240px;
+    height: 60px;
+    border-radius: 75px;
+    margin-top: 30px;
+    background: #ff4141;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1.4s ease;
+}
+
+.hero-latest-btn:hover {
+    background: #ff1f1f;
+    transform: scale(1.05);
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideInRight 1s ease-in-out;
+}
+
+.hero-right img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    0% { transform: translateX(-100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    0% { transform: translateX(100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(20deg); }
+}
